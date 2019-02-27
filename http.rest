@@ -1,0 +1,12 @@
+###
+POST http://47.96.98.60:8030/ZZB/login/face
+version: 1.0
+Authorization: bbcdc9c2-bfcd-4042-9abe-c1e852419cb9
+equipmentId: 197a113b2d9eb455
+eqid: 197a113b2d9eb455
+Content-Type: application/x-www-form-urlencoded
+
+{
+    faceId: test_hegui_server_100745
+    groupId: test_hegui_server_01
+}
