@@ -10,7 +10,7 @@ const AppBottomTabNavigator = createBottomTabNavigator({
   Home: {
     screen: HomePage,
     navigationOptions: {
-      title: 'Home',
+      headerTitle: 'Home',
       tabBarLable: 'Home',
       tabBarIcon: ({tintColor, focused}) => (
         <Ionicons 
@@ -24,7 +24,7 @@ const AppBottomTabNavigator = createBottomTabNavigator({
   Profile: {
     screen: ProfilePage,
     navigationOptions: {
-      title: 'Profile',
+      headerTitle: 'Profile',
       tabBarLable: 'Profile',
       tabBarIcon: ({tintColor, focused}) => (
         <Ionicons 

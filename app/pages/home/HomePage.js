@@ -8,10 +8,11 @@ import {
 export default class HomePage extends React.Component {
   static navigationOptions = ({navigation}) => {
     return {
-      headerTitle: 'Home',
-      headerLeft:  null,
-      headerRight: null,
-      gesturesEnabled: false,
+      title: navigation.state.params ? navigation.state.params.title : 'Home',
+      // headerTitle: null,
+      // headerLeft:  null,
+      // headerRight: null,
+      // gesturesEnabled: false,
   }};
 
   render() {
@@ -24,7 +25,13 @@ export default class HomePage extends React.Component {
             this.props.navigation.dispatch(StackActions.reset({
               index: 0,
               actions: [
-                NavigationActions.navigate({ routeName: 'Details' })
+                NavigationActions.navigate({ 
+                  routeName: "Details",
+                  params: {
+                    title: "Details",
+                    // headerTitle: "Details",
+                  }
+                })
               ],
             }))
           }}
