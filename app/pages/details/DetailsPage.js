@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Button } from 'react-native';
+import NavigationService from '../../utils/NavigationService';
 
 export default class DetailsPage extends React.Component {
   static navigationOptions = ({navigation}) => {
@@ -24,7 +25,7 @@ export default class DetailsPage extends React.Component {
         />
         <Button
           title="Go back"
-          onPress={() => navigation.goBack()}
+          onPress={() => NavigationService.goBack()}
         />
       </View>
     );
