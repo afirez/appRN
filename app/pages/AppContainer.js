@@ -14,10 +14,9 @@ const AppNavigator = createStackNavigator({
   },
 }, {
   initialRouteName: 'Main',
-    /* 这里定义的头部样式对栈中的每个屏幕生效除非那个屏幕类覆盖了改定义 */
-  navigationOptions: {
-    header: null,
-  },
+  // defaultNavigationOptions : {
+  //   headerLeft:  (<View></View>),
+  // },
 });
 
 export default createAppContainer(AppNavigator);

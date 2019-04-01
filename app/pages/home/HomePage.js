@@ -9,8 +9,9 @@ export default class HomePage extends React.Component {
   static navigationOptions = ({navigation}) => {
     return {
       title: navigation.state.params ? navigation.state.params.title : 'Home',
+      headerTitle: navigation.state.params ? navigation.state.params.title : 'Home',
       // headerTitle: null,
-      // headerLeft:  null,
+      headerLeft:  <View></View>,
       // headerRight: null,
       // gesturesEnabled: false,
   }};

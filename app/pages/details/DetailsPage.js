@@ -5,9 +5,9 @@ export default class DetailsPage extends React.Component {
   static navigationOptions = ({navigation}) => {
     const {params} = navigation.state
     return {
-      title: params ? params.title :'Details',
+      headerTitle: params ? params.title :'Details',
       // headerTitle: null,
-      // headerLeft:  null,
+      headerLeft:  <View></View>,
       // headerRight: null,
       // gesturesEnabled: false,
   }};

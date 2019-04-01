@@ -10,7 +10,6 @@ const AppBottomTabNavigator = createBottomTabNavigator({
   Home: {
     screen: HomePage,
     navigationOptions: {
-      headerTitle: 'Home',
       tabBarLable: 'Home',
       tabBarIcon: ({tintColor, focused}) => (
         <Ionicons 
@@ -24,7 +23,6 @@ const AppBottomTabNavigator = createBottomTabNavigator({
   Profile: {
     screen: ProfilePage,
     navigationOptions: {
-      headerTitle: 'Profile',
       tabBarLable: 'Profile',
       tabBarIcon: ({tintColor, focused}) => (
         <Ionicons 
@@ -36,5 +34,27 @@ const AppBottomTabNavigator = createBottomTabNavigator({
     }
   }
 });
+
+/**
+ * - AppContainer ( AppMavigator )
+ *   - AppNavigator ( StackMavigator )
+ *     - AppBottomTabNavigator ( BottomTabNavigator )
+ *       - HomePage
+ *       - ProfilePage
+ *     - DetailsPage
+ * 
+ * - navigationOptions in AppBottomTabNavigator and DetailsPage can update header of AppNavigator derectly.
+ * - navigationOptions in HomePage and ProfilePage can not update header of AppNavigator derectly.
+ */
+AppBottomTabNavigator.navigationOptions = ({ navigation }) => {
+  const { routeName } = navigation.state.routes[navigation.state.index];
+
+  // You can do whatever you like here to pick the title based on the route name
+  const headerTitle = routeName;
+
+  return {
+    headerTitle,
+  };
+};
 
 export default AppBottomTabNavigator;

@@ -6,11 +6,9 @@ export default class ProfilePage extends React.Component {
 
   static navigationOptions = ({navigation}) => {
     return {
-      // title: navigation.state.params ? navigation.state.params.title : 'Profile',
       headerTitle:navigation.state.params ? navigation.state.params.title : 'Profile',
-      // headerTitle: null,
-      // headerLeft:  null,
-      // headerRight: null,
+      headerLeft:  <View></View>,
+      headerRight: <View></View>,
       // gesturesEnabled: false,
   }};
 
