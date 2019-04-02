@@ -4,6 +4,7 @@ import {
   StackActions, 
   NavigationActions,
 } from 'react-navigation'; // Version can be specified in package.json
+import NavigationService from '../../utils/NavigationService';
 
 export default class HomePage extends React.Component {
   static navigationOptions = ({navigation}) => {
@@ -22,20 +23,7 @@ export default class HomePage extends React.Component {
         <Text>Home Page</Text>
         <Button
           title="Go to Details"
-          onPress={() => {
-            this.props.navigation.dispatch(StackActions.reset({
-              index: 0,
-              actions: [
-                NavigationActions.navigate({ 
-                  routeName: "Details",
-                  params: {
-                    title: "Details",
-                    // headerTitle: "Details",
-                  }
-                })
-              ],
-            }))
-          }}
+          onPress={() => {NavigationService.navigate("Details",{title: "Details"})}}
         />
       </View>
     );

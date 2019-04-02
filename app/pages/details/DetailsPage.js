@@ -8,7 +8,7 @@ export default class DetailsPage extends React.Component {
     return {
       headerTitle: params ? params.title :'Details',
       // headerTitle: null,
-      headerLeft:  <View></View>,
+      // headerLeft:  <View></View>,
       // headerRight: null,
       // gesturesEnabled: false,
   }};
